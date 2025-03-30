@@ -56,3 +56,15 @@ def longest_palindromic_substring(self, s):  #You should ignore the self paramet
                 if candidate2[1] > m:
                     maxi, m = candidate2
         return maxi
+'''
+Complexities:
+
+Time Complexity: O(n²) 
+The function calls helper for each character in the string which means n times helper is called, and helper may take up to O(n) time.
+which makes it O(n)*O(n)=O(n²)
+
+Space Complexity: O(n)
+The space required for storing string slices during the palindrome check.
+
+
+'''
