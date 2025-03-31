@@ -44,11 +44,11 @@ def longest_palindromic_substring(self, s):  #You should ignore the self paramet
                 left -= 1
                 right += 1
             # Return the palindrome in range left+1 to right-1
-            return  s[left + 1 : right ], r - l - 1     #The current longest palindromic substring centered at odd / even indices , The length of the current longest palindromic substring cenetred at odd / even indices.
+            return  s[left + 1 : right ], right - left - 1     #The current longest palindromic substring centered at odd / even indices , The length of the current longest palindromic substring cenetred at odd / even indices.
 
         for i in range(n):
-            candidate1 = helper(i, i + 1)  #ODD LENGTH PALINDROMIC SUBSTRING
-            candidate2 = helper(i, i)      #EVEN LENGTH PALINDROMIC SUBSTRING
+            candidate1 = helper(i, i + 1)  #EVEN LENGTH PALINDROMIC SUBSTRING
+            candidate2 = helper(i, i)      #ODD LENGTH PALINDROMIC SUBSTRING
             if candidate1[1] >= candidate2[1]:
                 if candidate1[1] > m :
                     maxi, m = candidate1   
