@@ -10,15 +10,15 @@ Algorithm:
       
               Takes two indices left and right which attempts to expand outwards from the center.
             
-              While s[l] == s[r] (i.e., a palindrome), keep expanding:
+              While s[left] == s[right] (i.e., a palindrome), keep expanding:
     
-                        Decrease l (move left).
+                        Decrease left (move left).
                         
-                        Increase r (move right).
+                        Increase right (move right).
               
               Stop when the substring no longer forms a palindrome or when the indices go out of bounds (i.e., l < 0 or r >= n).
               
-              Return the substring from l + 1 to r - 1 (the valid palindromic substring) and its respective length which is given by r-(l+1) = r-l-1
+              Return the substring from l + 1 to r - 1 (the valid palindromic substring) and its respective length which is given by right-(left+1) = right-left-1
   
   Main Loop: Iterate through each possible center of the palindrome:
   
